@@ -29,5 +29,5 @@ if [ -z "$host" ]; then
     exec ollama "$@"
 else
     echo "Using $name ($host)"
-    OLLAMA_HOST="$host" exec ollama "$@"
+    OLLAMA_HOST="$host" OLLAMA_CONTEXT_LENGTH=42000 exec ollama "$@"
 fi
